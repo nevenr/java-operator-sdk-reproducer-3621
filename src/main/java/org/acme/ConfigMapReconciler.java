@@ -13,7 +13,7 @@ public class ConfigMapReconciler implements Reconciler<ConfigMap> {
 
     @Override
     public UpdateControl<ConfigMap> reconcile(ConfigMap resource, Context<ConfigMap> context) throws Exception {
-        LOG.infof("Certificate %s/%s event", resource.getMetadata().getNamespace(), resource.getMetadata().getName());
+        LOG.infof("ConfigMap %s/%s event", resource.getMetadata().getNamespace(), resource.getMetadata().getName());
 
         if (context.isPrimaryResourceDeleted()) {
             LOG.infof("deleted");
